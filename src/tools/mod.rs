@@ -47,7 +47,7 @@ impl ToolRegistry {
     /// Creates a new tool registry with all available tools
     pub fn new() -> Self {
         use crate::tools::be::{
-            BeVarsTool, MemzGlobalTool, MemzTool, PipelineTasksTool, PstackTool,
+            BeConfigManagerTool, BeVarsTool, MemzGlobalTool, MemzTool, PipelineTasksTool, PstackTool,
         };
         use crate::tools::be::{JmapDumpTool as BeJmapDumpTool, JmapHistoTool as BeJmapHistoTool};
         use crate::tools::fe::routine_load::get_routine_load_tools;
@@ -75,6 +75,7 @@ impl ToolRegistry {
         registry.be_tools.push(Box::new(PipelineTasksTool));
         registry.be_tools.push(Box::new(MemzTool));
         registry.be_tools.push(Box::new(MemzGlobalTool));
+        registry.be_tools.push(Box::new(BeConfigManagerTool));
 
         registry
     }

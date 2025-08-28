@@ -15,6 +15,7 @@ The tool is organized into two main categories:
 
 - **`pstack`**: Displays the stack trace for any running process, offering insights into its execution state.
 - **`get_be_vars`**: Retrieves and displays the environment variables of a running process.
+- **`be-config-manager`**: Manage configuration variables for BE nodes across the cluster.
 
 ## Usage
 
